@@ -1,0 +1,58 @@
+.ant-pagination {
+    .ant-pagination-prev {
+        & > button {
+            background-color: $font-color-status-panding !important;
+            color: $bg-color-button-secondary !important;
+            border-color: $font-color-status-panding !important ;
+        }
+        &:hover {
+            & > button {
+                background-color: $bg-color-button-secondary !important;
+                color: $font-color-status-panding !important;
+                border-color: $font-color-status-panding !important;
+            }
+        }
+    }
+    .ant-pagination-item {
+        border-color: $font-color-status-panding !important ;
+        & > a {
+            background-color: $font-color-status-panding !important;
+            color: $bg-color-button-secondary !important;
+        }
+        &:hover {
+            border-color: $font-color-status-panding !important;
+            & > a {
+                background-color: $bg-color-button-secondary !important;
+                color: $font-color-status-panding !important;
+            }
+        }
+    }
+    .ant-pagination-item-active {
+        border-color: $font-color-status-panding !important ;
+        & > a {
+            background-color: $bg-color-button-secondary !important;
+            color: $font-color-status-panding !important;
+        }
+        &:hover {
+            border-color: $font-color-status-panding !important;
+            & > a {
+                background-color: $bg-color-button-secondary !important;
+                color: $font-color-status-panding !important;
+            }
+        }
+    }
+    .ant-pagination-next {
+        & > button {
+            background-color: $font-color-status-panding !important;
+            color: $bg-color-button-secondary !important;
+            border-color: $font-color-status-panding !important ;
+        }
+        &:hover {
+            & > button {
+                background-color: $bg-color-button-secondary !important;
+                color: $font-color-status-panding !important;
+                border-color: $font-color-status-panding !important;
+            }
+        }
+    }
+}

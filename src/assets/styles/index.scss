@@ -1,0 +1,31 @@
+// General
+
+@import 'general/fonts';
+@import 'general/default-extensions';
+@import 'general/variable.module';
+@import 'general/grid-system';
+@import 'general/general';
+@import 'general/pagination';
+
+// Libraries
+@import '~antd/dist/antd.css';
+
+// Partials
+@import 'partials/header';
+@import 'partials/heading';
+@import 'partials/video';
+@import 'partials/home-transaction';
+@import 'partials/navigation';
+@import 'partials/home-page';
+@import 'partials/dlt-header-page';
+@import 'partials/_dlt-data-link';
+@import 'partials/dlt-transaction';
+@import 'partials/property-card';
+@import 'partials/transaction-tabs';
+@import 'partials/windows-logo';
+
+// Shared
+@import 'shared/tabs';
+@import 'shared/footer';
+
+// @import 'shared/cropper';

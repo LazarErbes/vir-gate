@@ -1,0 +1,126 @@
+$main-container-grid-breakpoints: (
+    680: 768,
+    1024: 1024,
+    1170: 1170,
+    1280: 1280,
+    1350: 1380,
+    1680: 1680,
+);
+%element-basic {
+    position: relative;
+    min-height: 1px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+%container-basic {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    position: relative;
+    width: 100%;
+}
+%c-control-basic {
+    margin-right: -15px;
+    margin-left: -15px;
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+%clear-padding {
+    padding-right: 0;
+    padding-left: 0;
+}
+%clear-margin {
+    margin-right: 0;
+    margin-left: 0;
+}
+%display-flex {
+    display: flex;
+}
+
+//Column creator
+@mixin columns-creator($column-number) {
+    $column-breakpoints: (
+        xs: '320',
+        sm: '568',
+        md: '768',
+        lg: '1024',
+        ld: '1110',
+        xl: '1280',
+        xxl: '1620',
+    );
+    $max-width-unit: 100% / $column-number;
+    @each $bp-size, $value in $column-breakpoints {
+        @for $i from 1 through $column-number {
+            &-#{$bp-size}-#{$i},
+            &-#{$bp-size}-#{$i}-flex,
+            &-#{$bp-size}-#{$i}-clear,
+            &-#{$bp-size}-#{$i}-flex-clear {
+                @extend %element-basic;
+            }
+            &-#{$bp-size}-#{$i}-flex-clear,
+            &-#{$bp-size}-#{$i}-clear {
+                @extend %clear-padding;
+            }
+            &-#{$bp-size}-#{$i}-flex,
+            &-#{$bp-size}-#{$i}-flex-clear {
+                @extend %display-flex;
+            }
+            &-#{$bp-size}-#{$i},
+            &-#{$bp-size}-#{$i}-clear {
+                float: left;
+            }
+        }
+        @media all and (min-width: #{$value}px) {
+            @for $i from 1 through $column-number {
+                &-#{$bp-size}-#{$i},
+                &-#{$bp-size}-#{$i}-clear {
+                    flex: 0 0 $max-width-unit * $i;
+                    max-width: $max-width-unit * $i;
+                }
+                &-#{$bp-size}-offset-#{$i} {
+                    margin-left: $max-width-unit * $i;
+                }
+                &-#{$bp-size}-#{$i}-basic,
+                &-#{$bp-size}-#{$i}-basic-clear {
+                    width: $max-width-unit * $i;
+                }
+            }
+        }
+    }
+}
+//Container creator
+@mixin container-setup($grid-breakpoints) {
+    @extend %container-basic;
+    @each $grid-point-value, $container-width in ($grid-breakpoints) {
+        @media all and (min-width: #{$grid-point-value}px) {
+            & {
+                max-width: #{$container-width}px;
+            }
+        }
+    }
+}
+
+//COLUMNS:
+//input number of columns:
+.col {
+    @include columns-creator(12);
+}
+//COLUMN CONTROLERS
+.row {
+    @extend %c-control-basic;
+    &-flex,
+    &-flex-clear {
+        @extend %c-control-basic;
+        @extend %display-flex;
+        flex-wrap: wrap;
+    }
+    &-clear,
+    &-flex-clear {
+        @extend %clear-margin;
+    }
+}

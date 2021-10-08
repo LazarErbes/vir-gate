@@ -1,0 +1,111 @@
+.home-transaction {
+    @extend %relative;
+    overflow: hidden;
+
+    @include respond-to(1170) {
+        overflow: visible;
+    }
+
+    &__images-container {
+        gap: 90px;
+        padding-bottom: 200px;
+    }
+
+    &__images-first {
+        flex: 0 0 30%;
+    }
+
+    &__images-second {
+        height: 400px;
+        flex: 0 0 60%;
+    }
+
+    &__title {
+        max-width: 750px;
+    }
+
+    &__single-img {
+        max-height: 450px;
+        min-height: 450px;
+        opacity: 0;
+        transform: translateX(50px);
+        transition: 0.5s all ease-in-out;
+
+        &--second {
+            max-height: 220px;
+            min-height: 220px;
+
+            @include respond-to(738) {
+                max-height: 450px;
+                min-height: 450px;
+            }
+        }
+
+        &--show {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+
+    &__main {
+        height: auto;
+    }
+
+    &__images-container {
+        flex-direction: column;
+        padding: 0 25px 40px 25px;
+
+        @include respond-to(738) {
+            padding: 0 0 40px 0;
+            flex-direction: row;
+        }
+    }
+
+    &__images-green {
+        @extend %absolute;
+        z-index: -1;
+        background-color: $bg-underline;
+        height: 220px;
+        left: 0;
+        right: 0;
+        bottom: -100px;
+
+        @include respond-to(738) {
+            height: 250px;
+            width: 600px;
+            left: -100px;
+            bottom: 0;
+        }
+
+        @include respond-to(1024) {
+            width: 800px;
+        }
+
+        &--other {
+            height: 150px;
+            bottom: 0px;
+
+            @include respond-to(738) {
+                height: 250px;
+                left: auto;
+                right: 0;
+            }
+
+            @include respond-to(1440) {
+                left: auto;
+                right: 0;
+            }
+            @include respond-to(1640) {
+                left: auto;
+                right: -50px;
+            }
+        }
+    }
+
+    &__row-reverse {
+        flex-direction: column-reverse;
+        @include respond-to(738) {
+            flex-direction: row-reverse;
+        }
+    }
+}

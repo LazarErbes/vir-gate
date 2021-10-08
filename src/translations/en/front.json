@@ -1,0 +1,47 @@
+{
+    "propertyCard": {
+        "yearOfCompletion": "Year Of Completion",
+        "landTenure": "Land Tenure",
+        "siteAreaSqft": "Site Area Sqft",
+        "carparkLots": "Carpark Lots",
+        "sectors": "Sectors",
+        "majorTenants": "Major Tenants",
+        "nla": "Net Leasable Area"
+    },
+    "property": {
+        "propertySummary": "Property Summary",
+        "cashFlow": "Cash Flow",
+        "dataRoom": "Data Room",
+        "transaction": "Transaction",
+        "research": "Research",
+        "projectTeam": "Project Team",
+        "faq": "FAQ",
+        "investors": "Investors",
+        "schedule": "Schedule",
+        "newsletterBuilder": "Newsletter Builder"
+    },
+
+    "menu": {
+        "welcome": "Welcome",
+        "transaction": "Transaction",
+        "datalink": "Data Link"
+    },
+
+    "static": {
+        "termsOfUse": "Terms of Use",
+        "privacyPolicy": "Privacy Policy"
+    },
+
+    "footer": {
+        "termsOfUse": "Terms of Use",
+        "privacyPolicy": "Privacy Policy",
+        "copyrightVirgate": "@Copyright Virgate "
+    },
+
+    "userRoles": {
+        "0": "Admin",
+        "1": "Member",
+        "2": "Manager",
+        "3": "Super Admin"
+    }
+}

@@ -1,0 +1,64 @@
+.navigation {
+    &__lg-menu {
+        display: none;
+
+        a {
+            color: $bg-color-footer;
+        }
+
+        button {
+            color: $bg-color-footer;
+        }
+
+        @include respond-to(783) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__burger {
+        margin: auto 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        width: 35px;
+        cursor: pointer;
+
+        &--slide-in {
+            margin-left: 30px;
+            margin-top: 30px;
+
+            & div {
+                background-color: $bg-color-active-tab;
+            }
+        }
+    }
+
+    &__burger-line {
+        height: 2px;
+        background-color: $bg-color-active-tab;
+
+        &--second {
+            width: 50%;
+        }
+    }
+
+    &__top-links {
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+
+    &__line {
+        display: inline-block;
+        width: 1px;
+        height: 20px;
+    }
+
+    &__container {
+        @include respond-to(1900) {
+            max-width: 1900px;
+            margin: 0 auto;
+        }
+    }
+}

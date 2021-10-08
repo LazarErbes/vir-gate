@@ -1,0 +1,127 @@
+.person-card {
+    @at-root &__container {
+        border-radius: 9px;
+        width: 100%;
+        max-width: 360px;
+        box-shadow: 0 0 20px 0 rgba(182, 218, 213, 0.2);
+        padding-top: 20px;
+        margin: 0px auto;
+        @extend %relative;
+
+        &--project-team {
+            max-width: 300px;
+        }
+    }
+    @at-root &__basic {
+        text-align: center;
+        padding-bottom: 20px;
+        border-bottom: 1px solid $border-color-card;
+        margin-bottom: 30px;
+
+        &--no-border {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+    }
+
+    @at-root &__image {
+        @extend %flex-centered;
+        img {
+            border-radius: 50%;
+            height: 120px;
+            width: 120px;
+        }
+    }
+    @at-root &__name {
+        @extend %font-light;
+        color: $font-color-secondary;
+        font-size: 26px;
+    }
+    @at-root &__position {
+        @extend %font-regular;
+        font-family: $font-family-secondary;
+    }
+
+    @at-root &__element {
+        font-family: $font-family-secondary;
+        @at-root &-name {
+            @extend %font-medium;
+            color: $font-color-label;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        @at-root &-value {
+            @extend %font-regular;
+            color: $font-color-secondary;
+            font-size: 15px;
+            margin-top: 8px;
+            margin-bottom: 24px;
+            // text-transform: uppercase;
+        }
+    }
+    @at-root &__dots {
+        @extend %absolute;
+        right: 15px;
+        top: -30px;
+        font-size: 25px;
+        color: $border-color-secondary;
+        cursor: pointer;
+
+        &--smaller {
+            top: -15px;
+            font-size: 15px;
+        }
+    }
+
+    &__approved {
+        @extend %font-regular;
+        border: none;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        outline: none;
+        background-color: $bg-color-checked;
+        color: $border-color-radio-selected;
+        font-size: 12px;
+        font-family: $font-family-secondary;
+        text-transform: uppercase;
+        padding: 10px 0;
+        cursor: pointer;
+
+        &--not {
+            color: $font-color-primary;
+            background-color: $bg-color-panding-approval;
+        }
+    }
+
+    &__element-name {
+        &--size-up {
+            font-size: 14px;
+        }
+    }
+}
+
+.person-card__image {
+    .ant-avatar {
+        width: 52px;
+        height: 52px;
+
+        &-string {
+            font-size: 20px;
+            transform: scale(1) translate(-50%, 25%) !important;
+        }
+    }
+}
+
+.worker-card .ant-avatar {
+    width: 120px;
+    height: 120px;
+}
+
+.worker-card .ant-avatar-string {
+    @extend %absolute;
+    font-size: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+}

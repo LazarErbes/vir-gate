@@ -1,0 +1,130 @@
+.h-section {
+    @extend %relative;
+    background-image: url('../../images/First_Section.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1024px;
+
+    &-title {
+        @extend %absolute;
+        @extend %font-light;
+        font-family: $font-family-1;
+        color: $font-color-heading-text;
+        top: 228px;
+        left: 90px;
+        height: 130px;
+        width: 914px;
+        font-size: 60px;
+        letter-spacing: 1.25px;
+        line-height: 65px;
+    }
+
+    &-home-title {
+        @extend %absolute;
+        @extend %font-light;
+        font-family: $font-family-1;
+        color: $font-color-heading-text;
+        top: 50%;
+        left: 50px;
+        height: 130px;
+        width: 914px;
+        font-size: 60px;
+        letter-spacing: 1.25px;
+        line-height: 65px;
+        opacity: 0;
+        transform: translate(-80px, -70%);
+        transition: 3s;
+        max-width: 240px;
+
+        @include respond-to(420) {
+            max-width: 340px;
+            left: 90px;
+        }
+
+        @include respond-to(738) {
+            max-width: none;
+            transform: translate(-80px, -50%);
+            max-width: 650px;
+        }
+
+        @include respond-to(1024) {
+            max-width: none;
+        }
+
+        &--show {
+            opacity: 1;
+            transform: translate(0px, -70%);
+
+            @include respond-to(738) {
+                transform: translate(0px, -50%);
+            }
+        }
+
+        ::after {
+            content: '';
+            display: none;
+            width: 100px;
+            margin-top: 100px;
+            border-bottom: solid 4px $font-color-light;
+
+            @include respond-to(738) {
+                display: inline-block;
+            }
+        }
+    }
+
+    &-title::after {
+        content: '';
+        display: inline-block;
+        width: 100px;
+        border-bottom: solid 4px $font-color-light;
+    }
+
+    &-question {
+        @extend %absolute;
+        @extend %font-light;
+        color: $font-color-light;
+        font-family: $font-family-1;
+        left: 90px;
+        bottom: 308px;
+        height: 26px;
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    &-buttons {
+        @extend %absolute;
+        left: 90px;
+        bottom: 213px;
+
+        &__button {
+            @extend %font-light;
+            font-family: $font-family-1;
+            color: $font-color-light;
+            border: 1px solid $font-color-heading-text;
+            background-color: transparent;
+            box-sizing: border-box;
+            height: 48px;
+            width: 167px;
+            border-radius: 4px;
+            font-size: 14px;
+
+            &:not(:first-child) {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    &__logos {
+        @extend %absolute;
+        bottom: 56px;
+        left: 261px;
+        height: 72px;
+        width: 919px;
+    }
+
+    &__logo {
+        height: 31px;
+        width: 83px;
+    }
+}

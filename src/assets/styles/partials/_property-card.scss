@@ -1,0 +1,107 @@
+.property-card {
+    @at-root &__container {
+        border-radius: 4px;
+        box-shadow: 0 0 16px 0 rgba(182, 218, 213, 0.15);
+        font-size: 11px;
+        max-width: 320px;
+        padding-bottom: 30px;
+        margin: 30px auto;
+        border: 1px solid transparent;
+
+        &--homepage {
+            max-width: none;
+            width: 100%;
+
+            @include respond-to(738) {
+                max-width: 320px;
+            }
+        }
+
+        &--full-height {
+            height: 100%;
+        }
+
+        &:hover {
+            background: $color-15;
+            cursor: pointer;
+
+            .property-card__element-list {
+                border-top: 1px solid $color-6;
+            }
+        }
+    }
+
+    &__big-conteiner {
+        padding: 20px;
+        max-width: 1060px;
+        margin: 0 auto;
+    }
+
+    &__hotels {
+        margin-bottom: 20px;
+
+        @include respond-to(738) {
+            margin-bottom: 0;
+        }
+    }
+
+    @at-root &__image {
+        img {
+            @extend %top-border-radius;
+            max-height: 200px;
+        }
+    }
+
+    @at-root &__name {
+        color: $font-color-secondary;
+    }
+
+    @at-root &__address {
+        @extend %font-regular;
+        font-family: $font-family-secondary;
+        font-size: 10px;
+    }
+
+    @at-root &__element {
+        @at-root &-list {
+            border-top: 1px solid $border-color-card;
+            padding: 10px 20px 0px 13px;
+            margin: 10px 2px 0;
+
+            &--border-bottom {
+                padding-bottom: 20px;
+                border-bottom: 1px solid $border-color-card;
+            }
+        }
+        @at-root &-item {
+            margin-top: 10px;
+            p {
+                font-size: 14px;
+                color: $font-color-primary;
+            }
+        }
+        @at-root &-header {
+            margin-top: 20px;
+            p {
+                font-size: 14px;
+                color: $font-color-primary;
+            }
+        }
+        @at-root &-name {
+            @extend %font-medium;
+            font-family: $font-family-secondary;
+        }
+    }
+
+    &__title {
+        padding: 0 10px;
+    }
+
+    &__loading {
+        span {
+            height: 32px;
+            width: 32px;
+            color: $color-5;
+        }
+    }
+}

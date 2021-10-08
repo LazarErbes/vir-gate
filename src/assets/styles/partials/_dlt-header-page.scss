@@ -1,0 +1,82 @@
+.dlt-header-page {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    height: 300px;
+
+    @include respond-to(650) {
+        height: 400px;
+    }
+
+    @include respond-to(700) {
+        height: 450px;
+    }
+
+    @include respond-to(800) {
+        height: 500px;
+    }
+
+    @include respond-to(900) {
+        height: 550px;
+    }
+
+    @include respond-to(1000) {
+        height: 600px;
+    }
+
+    @include respond-to(1100) {
+        height: 650px;
+    }
+
+    @include respond-to(1200) {
+        height: 700px;
+    }
+
+    @include respond-to(1300) {
+        height: 750px;
+    }
+
+    @include respond-to(1400) {
+        height: 800px;
+    }
+    @include respond-to(1500) {
+        height: 850px;
+    }
+    @include respond-to(1600) {
+        height: 900px;
+    }
+    @include respond-to(1700) {
+        height: 950px;
+    }
+    @include respond-to(1800) {
+        height: 1000px;
+    }
+    @include respond-to(1900) {
+        height: 1050px;
+    }
+    @include respond-to(2000) {
+        height: 1100px;
+    }
+    @include respond-to(2100) {
+        height: 1150px;
+    }
+    &--bg-color {
+        background-color: $bg-dlt-header;
+    }
+
+    &__title {
+        font-size: 32px;
+        color: $font-color-header-light;
+    }
+    &__subtitle {
+        font-size: 16px;
+        color: $font-color-header-light;
+    }
+
+    &__main {
+        width: 50%;
+    }
+
+    &__full-height {
+        height: 100%;
+    }
+}

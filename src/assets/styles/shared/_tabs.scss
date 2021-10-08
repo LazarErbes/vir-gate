@@ -1,0 +1,40 @@
+.ant-tabs-top {
+    .ant-tabs-nav {
+        padding-left: 80px;
+        border-bottom: 1px solid $color-11;
+        &:before {
+            display: none;
+        }
+
+        .ant-tabs-ink-bar {
+            border-radius: 100px;
+            height: 5px;
+        }
+    }
+}
+
+.ant-tabs-tab {
+    padding: 35px 0;
+    align-items: flex-end;
+    .ant-tabs-tab-btn {
+        @extend %font-medium;
+        color: $font-color-tabs;
+        font-family: $font-family-primary;
+        font-size: 16px;
+        text-align: center;
+
+        img {
+            max-height: 50px;
+            max-width: 40px;
+        }
+    }
+    &.ant-tabs-tab-active {
+        .ant-tabs-tab-btn {
+            color: $font-color-secondary;
+        }
+    }
+}
+
+.ant-tabs-ink-bar {
+    background-color: $bg-color-active-tab;
+}

@@ -1,0 +1,123 @@
+// Colors
+$color-1: #efefef;
+$color-2: #a1abbd;
+$color-3: #1c4050;
+$color-4: #6e7189;
+$color-5: #fd615a;
+$color-6: #f7fdfc;
+$color-7: #ffffff;
+$color-8: #0f242f;
+$color-9: #c6cbd4;
+$color-10: #fdfefe;
+$color-11: #eff3f9;
+$color-12: #b6dad5;
+$color-13: #3ac184;
+$color-14: #def3ea;
+$color-15: #f0f2f5;
+$color-16: #fec4c2;
+$color-17: #54617a;
+$color-18: #3ac18426;
+$color-19: rgba(198, 203, 212, 0.5);
+$color-20: #bfc5d2;
+$color-21: #f4f4f4;
+$color-22: #488dff;
+$color-23: #488effbb;
+$color-24: #455997;
+$color-25: #ff5353;
+$color-26: #a7b9f0;
+$color-27: #b2b2b2;
+$color-28: #6d7278;
+$color-29: #6d727825;
+$color-30: #797c95;
+$color-31: #ff535351;
+$color-32: #3ac18451;
+$color-33: #aae8cc;
+$color-34: #bbbbbc;
+$color-35: #8798ad;
+$color-37: rgba(182, 218, 213, 0.25);
+$color-38: #bbbbbc;
+$color-39: #b0bac9;
+$color-40: #b6dad54d;
+$color-41: #fd625a58;
+$color-42: #111111db;
+$color-43: #789e9e;
+$color-44: #154240;
+$color-45: #02041a;
+$color-46: #4d6466;
+$color-47: #b7d8d6;
+$color-48: #111;
+
+// Font family
+$font-family-1: 'Montserrat';
+$font-family-2: 'Rubik', sans-serif;
+
+// Background
+$bg-color-primary: $color-6;
+$bg-color-button-primary: $color-5;
+$bg-color-button-secondary: $color-7;
+$bg-color-footer: $color-8;
+$bg-color-active-tab: $color-3;
+$bg-color-input: $color-10;
+$bg-underline: $color-12;
+$bg-color-radio-selected: $color-14;
+$bg-color-dot: $color-16;
+$bg-color-checked: $color-18;
+$bg-color-panding-approval: $color-19;
+$bg-color-icon: $color-20;
+$bg-calendar-day: $color-22;
+$bg-calendar-day-light: $color-23;
+$bg-bid-status-panding: $color-29;
+$bg-bid-status-rejected: $color-31;
+$shadow-statistic: $color-40;
+$bg-pricing-hero: $color-42;
+$bg-dlt-header: $color-45;
+$bg-dlt-cards: $color-46;
+$bg-header-black: $color-48;
+
+// Borders
+$border-color-button-primary: $color-5;
+$border-color-footer: $color-9;
+$border-color-input: $color-11;
+$border-color-checkbox: $color-2;
+$border-color-card: $color-11;
+$border-color-secondary: $color-9;
+$border-color-radio-selected: $color-13;
+$border-color-dashed: $color-4;
+$border-company-hover: $color-38;
+$bolder-color-cash-flow-table: $color-37;
+
+// Typography
+$font-family-primary: $font-family-1;
+$font-family-secondary: $font-family-2;
+
+// Font colors
+$font-color-primary: $color-4;
+$font-color-secondary: $color-3;
+$font-color-heading: $color-3;
+$font-color-heading-text: $color-15;
+$font-color-button-primary: $color-7;
+$font-color-button-secondary: $color-5;
+$font-color-header-light: $color-1;
+$font-color-footer: $color-1;
+$font-color-tabs: $color-2;
+$font-color-label: $color-2;
+$font-color-error: $color-5;
+$font-color-light: $color-7;
+$font-color-table-row: $color-17;
+$font-color-date: $color-9;
+$font-color-schedule: $color-24;
+$font-color-sun: $color-25;
+$font-color-sat: $color-26;
+$font-color-days: $color-27;
+$font-color-status-panding: $color-28;
+$font-color-bid-modal-info: $color-30;
+$font-statistic-info: $color-35;
+$font-slide-in-font: $color-39;
+$font-home-page-about-heading: $color-43;
+$font-home-page-about-button: $color-44;
+$bg-dlt-transactions-light-grey: $color-47;
+
+:export {
+    bgColorPrimary: $bg-color-primary;
+    bgColorButtonSecondary: bg-color-button-secondary;
+}

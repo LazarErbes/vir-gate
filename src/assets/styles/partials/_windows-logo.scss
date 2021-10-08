@@ -1,0 +1,10 @@
+.windows-logo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-end;
+    &__single {
+        width: 200px;
+        height: 200px;
+    }
+}

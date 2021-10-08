@@ -1,0 +1,28 @@
+.footer {
+    background-color: $bg-color-footer;
+    &__copyright-container {
+        padding: 35px 25px;
+
+        p {
+            @extend %font-light;
+            color: $font-color-footer;
+        }
+
+        .footer__copyright-text {
+            @extend %font-medium;
+            margin: 0 20px;
+            color: $font-color-footer;
+            a {
+                font-size: 12px;
+            }
+        }
+    }
+
+    &__terms-list {
+        display: none;
+
+        @include respond-to(738) {
+            display: flex;
+        }
+    }
+}

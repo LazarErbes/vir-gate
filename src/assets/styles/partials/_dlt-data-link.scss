@@ -1,0 +1,130 @@
+.dlt-data-link {
+    padding-top: 100px;
+    &__main {
+        flex: 0 0 50%;
+
+        &--pr-50 {
+            padding-right: 80px;
+        }
+    }
+
+    &__secondary {
+        flex: 0 0 50%;
+        &--grey {
+            padding: 80px 50px;
+            background-color: $bg-dlt-cards;
+        }
+    }
+
+    &__title {
+        @extend %font-bold;
+        font-size: 32px;
+        color: $font-home-page-about-heading;
+
+        &--light-grey {
+            color: $bg-dlt-transactions-light-grey;
+        }
+    }
+
+    &__subtitle {
+        font-size: 18px;
+        color: $bg-dlt-header;
+
+        &--light-grey {
+            color: $bg-dlt-transactions-light-grey;
+        }
+    }
+
+    &__cards {
+        background-color: $bg-dlt-cards;
+        gap: 50;
+        padding: 100px 50px;
+        display: flex;
+        flex-direction: column;
+
+        @include respond-to(768) {
+            flex-direction: row;
+        }
+
+        &--no-bg {
+            background-color: transparent;
+            overflow-x: scroll;
+        }
+
+        &--grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-row-gap: 70px;
+            grid-column-gap: 30px;
+
+            @include respond-to(768) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @include respond-to(1110) {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    &__single-card-title {
+        @extend %font-bold;
+        font-size: 18px;
+        color: $bg-color-button-secondary;
+    }
+
+    &__single-card-subtitle {
+        font-size: 14px;
+        color: $bg-color-button-secondary;
+    }
+
+    &__single-card {
+        padding: 0 20px;
+        flex: 33%;
+        margin-bottom: 40px;
+
+        @include respond-to(768) {
+            margin-bottom: 0;
+        }
+
+        &--fixed {
+            transform: translateX(-50px);
+            opacity: 0;
+            transition: 0.5s all ease-in-out;
+
+            &--show {
+                opacity: 1;
+                transform: translateX(0px);
+            }
+
+            @include respond-to(1110) {
+                width: 50%;
+            }
+        }
+
+        &--animate {
+            transform: translateY(50px);
+            opacity: 0;
+            transition: 0.5s all ease-in-out;
+            &--show {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+    }
+
+    &__single-card-icon {
+        color: $bg-color-button-secondary;
+        font-size: 64px;
+    }
+}
+.data-link-transaction-page {
+    &__navigation-content {
+        .ant-tabs-nav {
+            width: fit-content;
+            margin: 0 auto;
+            padding-left: 0 !important;
+        }
+    }
+}
