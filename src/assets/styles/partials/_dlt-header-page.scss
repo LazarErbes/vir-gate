@@ -1,7 +1,7 @@
 .dlt-header-page {
     padding-top: 80px;
     padding-bottom: 80px;
-    height: 300px;
+    height: 400px;
 
     @include respond-to(650) {
         height: 400px;
@@ -16,7 +16,7 @@
     }
 
     @include respond-to(900) {
-        height: 550px;
+        height: 580px;
     }
 
     @include respond-to(1000) {
@@ -59,8 +59,9 @@
     @include respond-to(2100) {
         height: 1150px;
     }
+
     &--bg-color {
-        background-color: $bg-dlt-header;
+        background-color: $bg-header-dlat;
     }
 
     &__title {
@@ -74,6 +75,13 @@
 
     &__main {
         width: 50%;
+        &--data-link {
+            display: none;
+
+            @include respond-to(1024) {
+                display: block;
+            }
+        }
     }
 
     &__full-height {

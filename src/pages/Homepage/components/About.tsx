@@ -11,7 +11,7 @@ const About: FunctionComponent = () => {
             <h1 className="home-page-about__heading mt-100">
                 Analysing commercial real estate assets has never been so easy
             </h1>
-            <h1 className="home-page-about__subtitle mt-20">
+            <h1 className="home-page-about__subtitle mt-80">
                 Virgate is a web-based trading platform for global real estate.
             </h1>
             <h1 className="home-page-about__subtitle mt-20 mb-100">

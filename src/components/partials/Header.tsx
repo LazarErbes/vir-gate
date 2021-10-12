@@ -3,9 +3,11 @@ import { useEffect, useState } from 'react';
 import lightLogo from '../../assets/images/logo-w.png';
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import SlideInMenu from './SlideInMenu';
 
 const MainMenu = () => {
     const { t } = useTranslation(['f', 'b']);
+    const [openVideoModal, setOpenVideoModal] = useState<boolean>(false);
 
     return (
         <nav className="d-flex">
@@ -18,6 +20,17 @@ const MainMenu = () => {
                     {t('f:menu.transaction')}
                 </a>
             </div>
+            <div
+                className="navigation__burger"
+                onClick={() => {
+                    setOpenVideoModal(true);
+                }}
+            >
+                <div className="navigation__burger-line"></div>
+                <div className="navigation__burger-line"></div>
+                <div className="navigation__burger-line"></div>
+            </div>
+            <SlideInMenu openVideoModal={openVideoModal} setOpenVideoModal={setOpenVideoModal} />
         </nav>
     );
 };

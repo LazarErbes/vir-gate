@@ -10,7 +10,7 @@
             color: $bg-color-footer;
         }
 
-        @include respond-to(783) {
+        @include respond-to(768) {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -33,6 +33,10 @@
                 background-color: $bg-color-active-tab;
             }
         }
+
+        @include respond-to(768) {
+            display: none;
+        }
     }
 
     &__burger-line {
@@ -47,6 +51,21 @@
     &__top-links {
         text-transform: uppercase;
         font-size: 12px;
+
+        &--slide {
+            margin: 0;
+            font-size: 20px;
+        }
+    }
+
+    &__top-btn {
+        margin: 0;
+        padding: 10px 20px;
+        border: 1px solid $font-color-header-light;
+        background-color: transparent;
+        color: $font-color-header-light;
+        border-radius: 8px;
+        cursor: pointer;
     }
 
     &__line {

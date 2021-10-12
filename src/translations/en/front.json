@@ -8,6 +8,17 @@
         "majorTenants": "Major Tenants",
         "nla": "Net Leasable Area"
     },
+
+    "contactForm": {
+        "contactUs": "Contact Us",
+        "email": "Email",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "phoneNumber": "Phone Number"
+    },
+
+    "button": { "send": "Send" },
+
     "property": {
         "propertySummary": "Property Summary",
         "cashFlow": "Cash Flow",
@@ -24,7 +35,8 @@
     "menu": {
         "welcome": "Welcome",
         "transaction": "Transaction",
-        "datalink": "Data Link"
+        "datalink": "Data Link",
+        "requestDemo": "Request Demo"
     },
 
     "static": {

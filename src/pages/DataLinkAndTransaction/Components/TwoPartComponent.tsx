@@ -1,7 +1,7 @@
 import { FunctionComponent, useEffect } from 'react';
 interface Props {
-    firstPart: any;
-    secondPart: any;
+    firstPart: JSX.Element;
+    secondPart?: JSX.Element;
     className: string;
 }
 const TwoPartComponent: FunctionComponent<Props> = ({ firstPart, secondPart, className }) => {
@@ -23,7 +23,7 @@ const TwoPartComponent: FunctionComponent<Props> = ({ firstPart, secondPart, cla
     }, []);
 
     return (
-        <div className={`d-flex ${className}`}>
+        <div className={`${className}`}>
             {firstPart}
             {secondPart}
         </div>

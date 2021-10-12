@@ -1,10 +1,18 @@
-const colors = ['#f65314', '#7cbb00', '#00a1f1', '#ffbb00'];
-const WindowsLogo = () => {
+import shield from '../../../assets/images/shield.png';
+import microsoftLogo from '../../../assets/images/microsoft-logo.png';
+
+interface WindowsLogoProps {
+    isColor?: boolean;
+}
+
+const WindowsLogo = ({ isColor }: WindowsLogoProps) => {
     return (
-        <div className="windows-logo">
-            {colors.map((elem) => (
-                <div className="windows-logo__single" style={{ backgroundColor: elem }} />
-            ))}
+        <div className="col-xs-12 col-md-7 col-lg-6 col-xl-5">
+            {isColor ? (
+                <img src={microsoftLogo} className="mr-auto ml-auto" alt="Microsoft" />
+            ) : (
+                <img src={shield} className="mr-auto ml-auto" alt="shiled" />
+            )}
         </div>
     );
 };

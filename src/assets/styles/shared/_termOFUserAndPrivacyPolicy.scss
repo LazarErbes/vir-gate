@@ -1,0 +1,55 @@
+.terms-of-use {
+    &__wizard-heading {
+        font-size: 28px;
+    }
+    p {
+        font-size: 14px;
+    }
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 70px;
+        height: 20vh;
+    }
+
+    &__card-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__card {
+        width: 50%;
+        margin-bottom: 50px;
+        overflow-y: scroll;
+        height: 70vh;
+    }
+
+    &__title {
+        font-weight: 450;
+        font-size: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__header {
+        font-weight: 450;
+        font-size: 24px;
+    }
+
+    &__sub-header {
+        font-weight: 450;
+        font-size: 18px;
+    }
+
+    &__copyright {
+        font-size: 13px !important;
+    }
+
+    &__list {
+        list-style-type: disc;
+        margin-left: 40px;
+    }
+}
