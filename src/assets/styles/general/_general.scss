@@ -164,12 +164,6 @@ textarea {
 }
 
 // Containers
-.main-container {
-    @extend %relative;
-    max-width: 2100px;
-    margin: auto;
-    overflow: hidden;
-}
 
 .container {
     padding: 60px 0;
@@ -283,6 +277,10 @@ textarea {
 
 .justify-content-space-evenly {
     justify-content: space-evenly;
+}
+
+.flex-direction-row-reverse {
+    flex-direction: row-reverse;
 }
 
 // Forms
@@ -520,6 +518,10 @@ textarea {
     margin-right: 50px;
 }
 
+.mr-80 {
+    margin-right: 80px;
+}
+
 .mx-50 {
     margin: 0 50px;
 }
@@ -621,6 +623,14 @@ textarea {
     right: 0;
     background-color: #fff;
     z-index: 999;
+}
+
+.main-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    &--grey {
+        background-color: $bg-dlt-cards;
+    }
 }
 
 .confirmation .ant-modal-content {

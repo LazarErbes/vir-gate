@@ -56,31 +56,39 @@ const DataLink = () => {
 
     return (
         <div className="dlt-data-link">
-            <TwoPartComponent
-                className="mx-50"
-                firstPart={
-                    <DataLinkFirstPartText
-                        title={HeroInfo.title}
-                        text_one={HeroInfo.text_one}
-                        text_two={HeroInfo.text_two}
-                        text_tree={HeroInfo.text_tree}
-                        text_four={HeroInfo.text_four}
-                        append_class="pr-30"
-                    />
-                }
-                secondPart={<DataLinkSecondPartImg src={HeroInfo.image} append_class="pl-30" />}
-            />
-
-            <div className="dlt-data-link__cards d-flex mt-80">
-                {IconCard.map(({ text, title, icon }) => (
-                    <DataLinkCardIconCard text={text} title={title} icon={icon} />
-                ))}
+            <div className="main-container">
+                <TwoPartComponent
+                    className="row-flex-clear align-items-center mx-50"
+                    firstPart={
+                        <DataLinkFirstPartText
+                            title={HeroInfo.title}
+                            text_one={HeroInfo.text_one}
+                            text_two={HeroInfo.text_two}
+                            text_tree={HeroInfo.text_tree}
+                            text_four={HeroInfo.text_four}
+                            append_class="pr-30"
+                        />
+                    }
+                    secondPart={<DataLinkSecondPartImg src={HeroInfo.image} append_class="pl-30" />}
+                />
+            </div>
+            <div className="dlt-data-link__cards-container">
+                <div className="dlt-data-link__cards d-flex mt-80">
+                    {IconCard.map(({ text, title, icon }) => (
+                        <DataLinkCardIconCard text={text} title={title} icon={icon} />
+                    ))}
+                </div>
             </div>
 
-            <div className="dlt-data-link__cards dlt-data-link__cards--grid dlt-data-link__cards--no-bg">
-                {TextCard.map(({ text, title }, i) => (
-                    <DataLinkTextCard text={text} title={title} append_class={i % 2 === 0 ? ' ml-auto' : ''} />
-                ))}
+            <div className="main-container">
+                <div className="dlt-data-link__cards dlt-data-link__cards--grid dlt-data-link__cards--no-bg">
+                    {TextCard.map(({ text, title, icon }, i) => (
+                        <div className={`d-flex align-items-center${i % 2 === 0 ? ' flex-direction-row-reverse' : ''}`}>
+                            <DataLinkTextCard text={text} title={title} />
+                            <img src={icon} alt={title} className="dlt-data-link__cards-image" />
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );

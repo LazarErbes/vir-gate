@@ -3,7 +3,7 @@ interface DataLinkSecondPartImgProps {
     append_class?: string;
 }
 const DataLinkSecondPartImg = ({ append_class, src }: DataLinkSecondPartImgProps) => (
-    <div className={`dlt-data-link__secondary d-flex align-items-center ${append_class}`}>
+    <div className={`col-xs-12 col-md-12 col-lg-6 col-xl-5 ${append_class}`}>
         <img src={src} alt="Data Link" />
     </div>
 );

@@ -13,30 +13,52 @@
         &--grey {
             padding: 80px 50px;
             background-color: $bg-dlt-cards;
+            margin-top: 50px;
+
+            @include respond-to(768) {
+                margin-top: 0;
+            }
         }
     }
 
     &__title {
         @extend %font-bold;
-        font-size: 32px;
+        font-size: 46px;
         color: $font-home-page-about-heading;
 
         &--light-grey {
             color: $bg-dlt-transactions-light-grey;
         }
+
+        &--center {
+            text-align: center;
+        }
+
+        &--small {
+            font-size: 35px;
+        }
     }
 
     &__subtitle {
-        font-size: 18px;
+        font-size: 20px;
         color: $bg-dlt-header;
 
         &--light-grey {
             color: $bg-dlt-transactions-light-grey;
         }
+
+        &--center {
+            text-align: center;
+        }
+
+        &--small {
+            font-size: 16px;
+        }
     }
 
     &__cards {
-        background-color: $bg-dlt-cards;
+        max-width: 1440px;
+        margin: 0 auto;
         gap: 50;
         padding: 100px 50px;
         display: flex;
@@ -65,6 +87,17 @@
                 display: flex;
                 flex-direction: column;
             }
+        }
+    }
+    &__cards-container {
+        background-color: $bg-dlt-cards;
+    }
+
+    &__cards-image {
+        display: none;
+        width: 20%;
+        @include respond-to(1110) {
+            display: block;
         }
     }
 
@@ -117,6 +150,16 @@
     &__single-card-icon {
         color: $bg-color-button-secondary;
         font-size: 64px;
+        &--grey {
+            display: none;
+            flex: 0 0 50%;
+            font-size: 180px;
+            color: $font-home-page-about-heading;
+
+            @include respond-to(1110) {
+                display: block;
+            }
+        }
     }
 }
 .data-link-transaction-page {

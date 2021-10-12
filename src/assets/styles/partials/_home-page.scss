@@ -2,6 +2,8 @@
     &-header {
         @extend %relative;
         height: 300px;
+        overflow: hidden;
+        background-color: $bg-header-land;
 
         @include respond-to(650) {
             height: 350px;
@@ -99,11 +101,15 @@
             right: 0;
             bottom: 0;
             width: 100%;
-            z-index: -1;
+            z-index: 1;
 
             @include respond-to(2100) {
                 height: 1100px;
             }
+        }
+
+        &__video-helf {
+            width: 50%;
         }
 
         @keyframes popUp {
@@ -120,23 +126,25 @@
                 transform: translateX(100px);
             }
         }
+
+        &__main {
+            z-index: 2;
+        }
     }
 
     &-about {
-        width: 60%;
         padding-bottom: 80px;
-        margin: 0 auto;
-
+        margin: 0 50px;
         &__heading {
             @extend %font-bold;
-            font-size: 32px;
+            font-size: 42px;
             text-align: center;
             color: $font-home-page-about-heading;
         }
 
         &__subtitle {
             text-align: center;
-            font-size: 14px;
+            font-size: 20px;
             color: $font-home-page-about-button;
         }
 

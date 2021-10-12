@@ -1,7 +1,16 @@
-import { FunctionComponent, useEffect } from 'react';
+import { FunctionComponent, useCallback, useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import ContactFormModal from '../../../components/shared/ContactForm';
 import { text } from '../../../constants/HomePageText';
 
 const Header: FunctionComponent = () => {
+    const { t } = useTranslation(['f', 'b']);
+    const [isModalOpened, setIsModalOpened] = useState<boolean>(false);
+
+    const handleOnClickOpenModal = useCallback(() => {
+        setIsModalOpened(true);
+    }, []);
+
     useEffect(() => {
         var i = 0;
         const div: any = document.getElementById('roll-me');
@@ -29,7 +38,11 @@ const Header: FunctionComponent = () => {
 
     return (
         <div className="home-page-header__main d-flex flex-direction-column justify-content-center align-items-center">
-            <div className="home-page-header__rolling-text-container" id="roll-me"></div>
+            <div className="home-page-header__rolling-text-container mb-20" id="roll-me"></div>
+            <button className="navigation__top-btn" onClick={handleOnClickOpenModal}>
+                {t('f:menu.requestDemo')}
+            </button>
+            <ContactFormModal isModalOpened={isModalOpened} setIsModalOpened={setIsModalOpened} />
         </div>
     );
 };

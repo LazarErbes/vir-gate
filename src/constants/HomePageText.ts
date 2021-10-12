@@ -10,8 +10,13 @@ export const text = [
     `We extract data from servers and put it in the hands of users, where it’s most valuable`,
     `We manage the process end-to-end`,
 ];
-export const twoPartContent = {
+export const twoPartContentColors = {
     title: 'Powered by Microsoft',
     text_one:
         'Virgate puts everything you need to know at your fingertips. Merge your entire data universe and apply advanced data analytics and machine learning to gain the very best insights you need to make data driven decisions confidently. We will do the heavy lifting, so you can empower your team to further identify opportunities.',
+};
+export const twoPartContentShiled = {
+    title: 'Security you can rely on',
+    text_one:
+        'Powered by Microsoft security you can rest assured your data is protected. Whether analysing data, uploading properties for sale or transacting using Virgate your data is always secure.',
 };

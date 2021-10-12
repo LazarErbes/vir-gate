@@ -1,0 +1,18 @@
+.contact-form-modal {
+    &__close {
+        @extend %absolute;
+        background-color: $font-color-light;
+        color: $font-color-button-secondary;
+        border: 1px solid $font-color-button-secondary;
+        height: 30px;
+        width: 30px;
+        top: 30px;
+        right: 30px;
+        line-height: 25px;
+        border-radius: 30px;
+        text-align: center;
+        font-size: 2em;
+        transform: rotate(45deg);
+        cursor: pointer;
+    }
+}

@@ -1,5 +1,9 @@
 import { faChartLine, faStopwatch, faServer } from '@fortawesome/free-solid-svg-icons';
 import data_link from '../assets/images/data-link.png';
+import database from '../assets/images/database.png';
+import server from '../assets/images/server.png';
+import fingerprint from '../assets/images/fingerprint.png';
+import sandwatch from '../assets/images/sandwatch.png';
 
 export const IconCard = [
     {
@@ -23,18 +27,22 @@ export const TextCard = [
     {
         title: 'All the data you need at your fingertips',
         text: 'Virgate puts everything you need to know at your fingertips. Merge your entire data universe andapply advanced data analytics and machine learning to gain the very best insights you need tomake data driven decisions confidently. We will do the heavy lifting, so you can empower yourteam to further identify opportunities.',
+        icon: database,
     },
     {
         title: 'An edge on your competitors',
         text: 'Gain deeper understanding of the market and link previously unknown variables to your underwriting analysis. Build new powerful predictive scenario modeling to make faster and more informed decisions. Virgate enables you to maximise the value of your subscription data ensuring everything you’ll ever need is right there when you want it..',
+        icon: server,
     },
     {
         title: 'Leverage internal data ',
         text: ' Integrating the internal data from your organization will provide you with comparables and insights that you may otherwise overlook. Organise, utilize and maximise the value of your data in combination with external data to give yourself an edge on your competition. With Virgate you will source off-market deals, unmask owners, research portfolios, identify key value drivers across sectors and geographies, and perform deep analysis on market performance',
+        icon: fingerprint,
     },
     {
         title: 'Take back control of your data',
         text: ' Leverage your connected data for automated reporting, performance monitoring, and benchmarking.Reduce dependencies on manual workflows by streamlining operations and increasing scalability.Become more nimble.',
+        icon: sandwatch,
     },
 ];
 
