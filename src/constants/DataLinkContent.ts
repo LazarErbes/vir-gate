@@ -1,9 +1,9 @@
 import { faChartLine, faStopwatch, faServer } from '@fortawesome/free-solid-svg-icons';
 import data_link from '../assets/images/data-link.png';
-import database from '../assets/images/database.png';
-import server from '../assets/images/server.png';
-import fingerprint from '../assets/images/fingerprint.png';
-import sandwatch from '../assets/images/sandwatch.png';
+import database from '../assets/images/database.svg';
+import server from '../assets/images/server.svg';
+import infinite from '../assets/images/infinite.svg';
+import sandwatch from '../assets/images/sandhour.svg';
 
 export const IconCard = [
     {
@@ -37,7 +37,7 @@ export const TextCard = [
     {
         title: 'Leverage internal data ',
         text: ' Integrating the internal data from your organization will provide you with comparables and insights that you may otherwise overlook. Organise, utilize and maximise the value of your data in combination with external data to give yourself an edge on your competition. With Virgate you will source off-market deals, unmask owners, research portfolios, identify key value drivers across sectors and geographies, and perform deep analysis on market performance',
-        icon: fingerprint,
+        icon: infinite,
     },
     {
         title: 'Take back control of your data',

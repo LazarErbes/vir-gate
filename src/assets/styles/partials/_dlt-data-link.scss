@@ -96,6 +96,8 @@
     &__cards-image {
         display: none;
         width: 20%;
+        margin: 0 auto;
+
         @include respond-to(1110) {
             display: block;
         }
@@ -132,7 +134,7 @@
             }
 
             @include respond-to(1110) {
-                width: 50%;
+                flex: 0 0 50%;
             }
         }
 
