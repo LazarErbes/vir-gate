@@ -1,27 +1,32 @@
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import ContactFormModal from '../shared/ContactForm';
 
 interface SlideInMenuProps {
-    openVideoModal: boolean;
-    setOpenVideoModal: (prev: boolean) => void;
+    openSlideInMenu: boolean;
+    setOpenSlideInMenu: (prev: boolean) => void;
 }
 
-const SlideInMenu = ({ setOpenVideoModal, openVideoModal }: SlideInMenuProps) => {
-    const { t } = useTranslation(['f', 'b']);
+const SlideInMenu = ({ openSlideInMenu, setOpenSlideInMenu }: SlideInMenuProps) => {
+    const { t } = useTranslation(['f', 'b']),
+        [isModalOpened, setIsModalOpened] = useState<boolean>(false);
 
     const handleOnClickClose = () => {
-        setOpenVideoModal(false);
+        setOpenSlideInMenu(false);
     };
 
     return (
-        <div className={`slide-in-menu${openVideoModal ? ' slide-in-menu--slide' : ''}`}>
+        <div className={`slide-in-menu${openSlideInMenu ? ' slide-in-menu--slide' : ''}`}>
             <FontAwesomeIcon
                 icon={faTimes}
                 className="home-page-about__cross mr-80"
                 color="#efefef"
                 onClick={handleOnClickClose}
             />
+            <ContactFormModal isModalOpened={isModalOpened} setIsModalOpened={setIsModalOpened} />
+
             <ul className="mt-50">
                 <li className="d-flex justify-content-center">
                     <a
@@ -42,7 +47,15 @@ const SlideInMenu = ({ setOpenVideoModal, openVideoModal }: SlideInMenuProps) =>
                     </a>
                 </li>
                 <li className="d-flex justify-content-center mt-20">
-                    <button className="navigation__top-btn">{t('f:menu.requestDemo')}</button>
+                    <button
+                        className="navigation__top-btn"
+                        onClick={() => {
+                            handleOnClickClose();
+                            setIsModalOpened(true);
+                        }}
+                    >
+                        {t('f:menu.requestDemo')}
+                    </button>
                 </li>
             </ul>
         </div>

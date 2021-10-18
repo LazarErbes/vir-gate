@@ -7,7 +7,7 @@ import SlideInMenu from './SlideInMenu';
 
 const MainMenu = () => {
     const { t } = useTranslation(['f', 'b']);
-    const [openVideoModal, setOpenVideoModal] = useState<boolean>(false);
+    const [openSlideInMenu, setOpenSlideInMenu] = useState<boolean>(false);
 
     return (
         <nav className="d-flex">
@@ -23,14 +23,14 @@ const MainMenu = () => {
             <div
                 className="navigation__burger"
                 onClick={() => {
-                    setOpenVideoModal(true);
+                    setOpenSlideInMenu(true);
                 }}
             >
                 <div className="navigation__burger-line"></div>
                 <div className="navigation__burger-line"></div>
                 <div className="navigation__burger-line"></div>
             </div>
-            <SlideInMenu openVideoModal={openVideoModal} setOpenVideoModal={setOpenVideoModal} />
+            <SlideInMenu openSlideInMenu={openSlideInMenu} setOpenSlideInMenu={setOpenSlideInMenu} />
         </nav>
     );
 };

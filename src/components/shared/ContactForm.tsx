@@ -3,18 +3,19 @@ import { Formik, Form, Field } from 'formik';
 import { FunctionComponent } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ResearchContactFormValidationSchema } from '../../validations/ResearchContactForm';
+import ContactForm from '../../services/ContactForm';
 
-interface Props {
+interface ContactFormModalProps {
     isModalOpened: boolean;
     setIsModalOpened: (boolean: boolean) => void;
 }
 
-const ContactFormModal: FunctionComponent<Props> = (props) => {
+const ContactFormModal: FunctionComponent<ContactFormModalProps> = ({ isModalOpened, setIsModalOpened }) => {
     const { t } = useTranslation(['f', 'b']);
 
     const closeModalHandler = (resetForm: any) => {
         resetForm();
-        props.setIsModalOpened(false);
+        setIsModalOpened(false);
     };
 
     const hasErrors = (errors: any, name: string, touched: any) => {
@@ -26,10 +27,10 @@ const ContactFormModal: FunctionComponent<Props> = (props) => {
     return (
         <Modal
             className={'contact-form-modal'}
-            visible={props.isModalOpened}
+            visible={isModalOpened}
             footer={null}
             closable={false}
-            onCancel={() => props.setIsModalOpened(false)}
+            onCancel={() => setIsModalOpened(false)}
         >
             <p className="heading">{t('f:contactForm.contactUs')}</p>
             <Formik
@@ -40,7 +41,14 @@ const ContactFormModal: FunctionComponent<Props> = (props) => {
                 }}
                 validationSchema={ResearchContactFormValidationSchema}
                 enableReinitialize
-                onSubmit={async (values: any, { resetForm }) => {}}
+                onSubmit={async (values: any, { resetForm }) => {
+                    await ContactForm.contactForm({
+                        firstName: values.firstName,
+                        lastName: values.lastName,
+                        message: 'Request a demo ',
+                        fromEmail: values.email,
+                    });
+                }}
             >
                 {({ resetForm, errors, touched, validateForm, values }) => (
                     <Form className="row">
