@@ -38,7 +38,7 @@ const Header: FunctionComponent = () => {
 
     return (
         <div className="home-page-header__main d-flex flex-direction-column justify-content-center align-items-center">
-            <div className="home-page-header__rolling-text-container mb-20" id="roll-me"></div>
+            <div className="home-page-header__rolling-text-container mb-100" id="roll-me"></div>
             <button className="navigation__top-btn" onClick={handleOnClickOpenModal}>
                 {t('f:menu.requestDemo')}
             </button>
