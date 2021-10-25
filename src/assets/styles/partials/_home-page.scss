@@ -130,6 +130,14 @@
         &__main {
             z-index: 2;
         }
+
+        &__reverse {
+            flex-direction: row;
+
+            @include respond-to(1024) {
+                flex-direction: row-reverse;
+            }
+        }
     }
 
     &-about {
