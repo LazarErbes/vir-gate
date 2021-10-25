@@ -74,16 +74,19 @@ const DataLink = () => {
             </div>
             <div className="dlt-data-link__cards-container">
                 <div className="dlt-data-link__cards d-flex mt-80">
-                    {IconCard.map(({ text, title, icon }) => (
-                        <DataLinkCardIconCard text={text} title={title} icon={icon} />
+                    {IconCard.map(({ text, title, icon }, i: number) => (
+                        <DataLinkCardIconCard text={text} title={title} icon={icon} key={i} />
                     ))}
                 </div>
             </div>
 
             <div className="main-container">
                 <div className="dlt-data-link__cards dlt-data-link__cards--grid dlt-data-link__cards--no-bg">
-                    {TextCard.map(({ text, title, icon }, i) => (
-                        <div className={`d-flex align-items-center${i % 2 === 0 ? ' flex-direction-row-reverse' : ''}`}>
+                    {TextCard.map(({ text, title, icon }, i: number) => (
+                        <div
+                            className={`d-flex align-items-center${i % 2 === 0 ? ' flex-direction-row-reverse' : ''}`}
+                            key={i}
+                        >
                             <DataLinkTextCard text={text} title={title} />
                             <img src={icon} alt={title} className="dlt-data-link__cards-image" />
                         </div>
