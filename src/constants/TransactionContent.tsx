@@ -146,25 +146,7 @@ export const defaultTabs = [
             />
         ),
     },
-    {
-        id: 80,
-        icon: '',
-        name: 'Schedule',
-        component: (
-            <TwoPartComponent
-                className="py-50"
-                firstPart={
-                    <DataLinkFirstPartText
-                        title={'Schedule'}
-                        text_one={
-                            'Manage your time by sharing your availability with everyone in the deal room. If a buyer wants to schedule inspections, arrange financial modelling calls or anything else they can manage all this from the platform.'
-                        }
-                    />
-                }
-                secondPart={<DataLinkSecondPartImg src={'/static/media/data-link.png?.295757a9'} />}
-            />
-        ),
-    },
+
     {
         id: 90,
         icon: '',

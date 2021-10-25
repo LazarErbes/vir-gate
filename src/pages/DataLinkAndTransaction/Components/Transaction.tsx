@@ -26,7 +26,7 @@ const Transaction = () => {
                     }
                 />
                 <TwoPartComponent
-                    className="row-flex-clear mt-100 align-items-center"
+                    className="row-flex-clear mt-100 align-items-center mb-50"
                     firstPart={
                         <div className="col-xs-12 col-md-6">
                             <h1 className="dlt-transaction__quote" id="quote">

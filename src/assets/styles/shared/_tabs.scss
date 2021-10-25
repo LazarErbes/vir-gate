@@ -2,6 +2,7 @@
     .ant-tabs-nav {
         padding-left: 80px;
         border-bottom: 1px solid $color-11;
+
         &:before {
             display: none;
         }
@@ -9,6 +10,18 @@
         .ant-tabs-ink-bar {
             border-radius: 100px;
             height: 5px;
+        }
+    }
+}
+
+.transaction-tabs {
+    .ant-tabs-top {
+        .ant-tabs-nav {
+            width: 100%;
+
+            @include respond-to(1018) {
+                width: 1018px;
+            }
         }
     }
 }

@@ -26,7 +26,7 @@ export const Home = () => (
                 secondPart={<WindowsLogo isColor />}
             />
             <TwoPartComponent
-                className="row-flex-clear flex-direction-row-reverse mr-50 ml-50 mt-80 mb-80 align-items-center"
+                className="row-flex-clear home-page-header__reverse mr-50 ml-50 mt-80 mb-80 align-items-center"
                 firstPart={
                     <DataLinkFirstPartText
                         title={twoPartContentShiled.title}

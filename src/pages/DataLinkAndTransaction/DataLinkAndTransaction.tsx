@@ -6,6 +6,8 @@ import Header from './Components/Header';
 import { useTranslation } from 'react-i18next';
 import DataLink from './Components/DataLink';
 import Transaction from './Components/Transaction';
+import dl_video from '../../assets/videos/DL-hero.mp4';
+import tr_video from '../../assets/videos/TR-hero.mp4';
 
 const DataLinkAndTransaction = () => {
     const { t } = useTranslation(['f', 'b']),
@@ -49,29 +51,25 @@ const DataLinkAndTransaction = () => {
 
     const checkTopDisplay = () => {
         switch (history.location.hash) {
-            case '#10':
-                return (
-                    <Header
-                        params={history.location.hash}
-                        title="Data Link"
-                        subtitle="To meet our clients’ most demanding business use cases, we work with best-in-class data experts to unlock unparalleled insight and value"
-                    />
-                );
             case '#20':
                 return (
                     <Header
                         params={history.location.hash}
                         title="Transaction Management"
                         subtitle="We research commercial real estate, measure capital performance, market deals and enable you to acquire property securely"
+                        video={tr_video}
                     />
                 );
 
             default:
-                <Header
-                    params={history.location.hash}
-                    title="Data Link"
-                    subtitle="To meet our clients’ most demanding business use cases, we work with best-in-class data experts to unlock unparalleled insight and value"
-                />;
+                return (
+                    <Header
+                        params={history.location.hash}
+                        title="Data Link"
+                        subtitle="To meet our clients’ most demanding business use cases, we work with best-in-class data experts to unlock unparalleled insight and value"
+                        video={dl_video}
+                    />
+                );
         }
     };
 
