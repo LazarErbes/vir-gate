@@ -35,16 +35,18 @@ const DataLinkAndTransaction = () => {
     };
 
     useEffect(() => {
-        setActivTab(history.location.hash ? history.location.hash.replace('#', '') : '10');
         switch (history.location.hash.replace('#', '')) {
             case '10':
                 setAct(false);
+                setActivTab('10');
                 break;
             case '20':
                 setAct(true);
+                setActivTab('20');
                 break;
             default:
                 setAct(false);
+                setActivTab('10');
                 break;
         }
     }, [history.location.hash]);
